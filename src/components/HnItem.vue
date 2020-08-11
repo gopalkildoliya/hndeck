@@ -1,7 +1,7 @@
 <template>
     <div style="background: rgb(246, 246, 239)">
         <div v-if="item">
-            <a :href="item.url" class="text-dark">{{item.title}}</a>
+            <a :href="item.url || link" class="text-dark" target="_blank">{{item.title}} <small v-if="host">({{host}})</small></a>
             <br>
             <div class="text-secondary">
                 <small>{{item.score}} points by {{item.by}} {{time}} | {{item.descendants}} comments | <a :href="link" target="_blank" class="text-secondary">discuss</a></small>
@@ -38,6 +38,13 @@
             },
             time() {
                 return moment(this.item.time, 'X').fromNow()
+            },
+            host() {
+                if (this.item.url) {
+                    let url = new URL(this.item.url)
+                    return url.host;
+                }
+                return null;
             }
         }
     }
