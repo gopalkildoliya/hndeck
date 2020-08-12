@@ -1,5 +1,5 @@
 <template>
-    <div style="background: rgb(246, 246, 239)">
+    <div style="">
         <div v-if="item">
             <a :href="item.url || link" class="text-dark" target="_blank">{{item.title}} <small v-if="host">({{host}})</small></a>
             <br>

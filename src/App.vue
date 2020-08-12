@@ -2,16 +2,16 @@
   <div id="app" class="container-fluid" style="padding-left: 0px">
     <AppSidebar></AppSidebar>
     <div class="row" style="padding: 0px 15px 0px 95px;">
-      <div class="col-md-3 bg-white p-0" >
+      <div class="col-md-3 px-1">
         <DeckColumn name="Top News" type="topstories"/>
       </div>
-      <div class="col-md-3 bg-white p-0" >
+      <div class="col-md-3 px-1">
         <DeckColumn name="Ask HN" type="askstories"/>
       </div>
-      <div class="col-md-3 bg-white p-0" >
+      <div class="col-md-3 px-1">
         <DeckColumn name="Show HN" type="showstories"/>
       </div>
-      <div class="col-md-3 bg-white p-0" >
+      <div class="col-md-3 px-1" >
         <DeckColumn name="Jobs" type="jobstories"/>
       </div>
     </div>
@@ -36,6 +36,7 @@ export default {
   body {
     background: #e1e8ed !important;
   }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
