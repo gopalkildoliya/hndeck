@@ -4,7 +4,7 @@
             <a :href="item.url || link" class="text-dark" target="_blank">{{item.title}} <small v-if="host">({{host}})</small></a>
             <br>
             <div class="text-secondary">
-                <small>{{item.score}} points by {{item.by}} {{time}} | {{item.descendants}} comments | <a :href="link" target="_blank" class="text-secondary">discuss</a></small>
+                <small>{{item.score}} points by <span class="text-dark" v-on:click="$emit('show-profile', item.by)">{{item.by}}</span> {{time}} | {{item.descendants}} comments | <a :href="link" target="_blank" class="text-secondary">discuss</a></small>
             </div>
         </div>
     </div>

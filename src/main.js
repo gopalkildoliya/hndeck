@@ -4,6 +4,13 @@ import { rtdbPlugin } from 'vuefire'
 
 Vue.use(rtdbPlugin)
 
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -7,7 +7,7 @@
             <div v-if="type=='topstories'" class="border p-3 text-center">
                 <a href="https://www.producthunt.com/posts/hackernews-deck?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hackernews-deck" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=232165&theme=light" alt="HackerNews Deck - TwitterDeck for Hacker News. Realtime updates. | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
             </div>
-            <HnItem v-for="item in items.slice(0, 30)" :key="item['.value']" :itemid="item['.value']" class="border border-light p-3"></HnItem>
+            <HnItem v-for="item in items.slice(0, 30)" :key="item['.value']" :itemid="item['.value']" class="border border-light p-3" v-on:show-profile="$emit('show-profile', $event)"></HnItem>
         </div>
     </div>
 </template>
